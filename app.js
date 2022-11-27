@@ -30,3 +30,9 @@ const operate = function(a, b) {
         return a / b;
     }
 }
+
+// Clear Button
+
+clearButton.addEventListener('click', () => {
+    
+});
