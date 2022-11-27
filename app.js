@@ -1,3 +1,8 @@
+// Global Definitions
+const clearButton = document.querySelector('.clear');
+
+
+// Basic Calculator Functions
 const add = function(a, b) {
 	return a + b;
 }
