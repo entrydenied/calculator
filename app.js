@@ -2,7 +2,7 @@
 const container = document.querySelector('.container');
 const allButtons = document.querySelectorAll('.button');
 //const buttonClear = document.querySelector('.button-clear');
-const calcDisplay = document.queryCommandValue('.display')
+const calcDisplay = document.querySelector('.display')
 
 allButtons.forEach(button => {
     button.addEventListener('click', (e) => {
