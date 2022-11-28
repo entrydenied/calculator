@@ -1,5 +1,6 @@
 // Global Definitions
 const clearButton = document.querySelector('.clear');
+const container = document.querySelector('.container');
 
 
 // Basic Calculator Functions
@@ -30,6 +31,18 @@ const operate = function(a, b) {
         return a / b;
     }
 }
+
+/**
+const multiply = function(array) {
+  return array.reduce((total, current) => total * current);
+};
+
+const sum = function(array) {
+  return array.reduce((total, current) => total + current, 0);
+};
+
+ */
+
 
 // Clear Button
 
