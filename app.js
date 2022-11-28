@@ -1,7 +1,17 @@
 // Global Definitions
-const clearButton = document.querySelector('.clear');
 const container = document.querySelector('.container');
+const allButtons = document.querySelector('.button');
+const buttonClear = document.querySelector('.clear-button');
 
+allButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        console.log(e);
+    })
+})
+
+buttonClear.addEventListener('click', () => {
+    
+});
 
 // Basic Calculator Functions
 const add = function(a, b) {
@@ -46,6 +56,3 @@ const sum = function(array) {
 
 // Clear Button
 
-clearButton.addEventListener('click', () => {
-    
-});
