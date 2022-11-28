@@ -1,17 +1,23 @@
 // Global Definitions
 const container = document.querySelector('.container');
-const allButtons = document.querySelector('.button');
-const buttonClear = document.querySelector('.clear-button');
+const allButtons = document.querySelectorAll('.button');
+//const buttonClear = document.querySelector('.button-clear');
+const calcDisplay = document.queryCommandValue('.display')
 
 allButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        console.log(e);
+        const value = e.target.dataset.value
+        calcDisplay.innerText = value
     })
 })
 
-buttonClear.addEventListener('click', () => {
+// const value = e.target.dataset.value
+// display.innerText = value
+
+
+//buttonClear.addEventListener('click', () => {
     
-});
+//});
 
 // Basic Calculator Functions
 const add = function(a, b) {
