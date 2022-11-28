@@ -5,6 +5,8 @@ const allButtons = document.querySelectorAll('.button');
 const calcDisplay = document.querySelector('.display');
 const operators = ['/', '*', '-', '+'];
 
+
+
 allButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         const value = e.target.dataset.value
