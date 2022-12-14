@@ -6,6 +6,15 @@ const calcDisplay = document.querySelector('.display');
 const operators = ['/', '*', '-', '+'];
 
 
+// Center the calculator with css
+
+// Have a limit for the amount of numbers that can be placed in the display so it doesn't overflow
+// Get rid of the equals sign after you calculate an equation
+// Get rid of the trailing 0 at the start
+// Add a backspace button so the user can undo the wrong number
+// Add keyboard inputs
+// Add the (/) button
+
 
 allButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -36,7 +45,7 @@ allButtons.forEach(button => {
         calcDisplay.innerText += value
 
         if (value === "clear") {
-            calcDisplay.innerText = " "
+            calcDisplay.innerText = "0"
         }
     })
 })
