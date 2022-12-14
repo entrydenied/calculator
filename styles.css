@@ -1,13 +1,21 @@
-.container {
+body {
     display: flex;
-    width: 400px;
-    height: 600px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container {
+    
+    display: flex;
+    width: 430px;
+    height: 645px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: solid 2px black;
     background-color: black;
-    
+    border-radius: 10px;
 }
 
 .row {
@@ -24,24 +32,27 @@
     height: 100px;
     border: solid 1px black;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: dodgerblue;
+    margin: 3px;
 }
 
-#clear {
+#clear,
+#backspace {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 206px;
     height: 100px;
     border: solid 1px black;
     box-sizing: border-box;
+    margin-top: 6px;
 }
 
 .display {
     box-sizing: border-box;
-    width: 400px;
+    width: 420px;
     height: 100px;
     border: solid 1px black;
     display: flex;
@@ -50,5 +61,10 @@
     background-color: #d3d3d3;
     text-align: right;
     font-size: 70px;
+    border-radius: 10px;
 }
 
+.row > .div {
+    display: flex;
+    margin: 5px;
+}
