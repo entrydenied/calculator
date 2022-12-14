@@ -6,12 +6,12 @@ const calcDisplay = document.querySelector('.display');
 const operators = ['/', '*', '-', '+'];
 
 
-// Center the calculator with css
+// (DONE) Center the calculator with css & make it not ugly 
 
 // Have a limit for the amount of numbers that can be placed in the display so it doesn't overflow
 // Get rid of the equals sign after you calculate an equation
 // Get rid of the trailing 0 at the start
-// Add a backspace button so the user can undo the wrong number
+// Add a backspace button so the user can undo the wrong number (Make it work)
 // Add keyboard inputs
 // Add the (/) button
 
