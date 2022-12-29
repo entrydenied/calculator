@@ -44,8 +44,14 @@ allButtons.forEach(button => {
         calcDisplay.innerText += value
 
         if (value === "clear") {
-            calcDisplay.innerText = "0"
+            calcDisplay.innerText = " "
         }
+
+        // if (value.innerText == "delete") {
+        //     calcDisplay.value = calcDisplay.innerText.substring(0, calcDisplay.innerText.length - 1);
+        // }
+
+
     })
 })
 
@@ -92,7 +98,7 @@ const divide = function(a, b) {
     return a / b;
 }
 
-
+calcDisplay.innerText = null
 
 /**
 const multiply = function(array) {
