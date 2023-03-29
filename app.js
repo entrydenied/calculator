@@ -3,6 +3,12 @@ const allButtons = document.querySelectorAll('.button');
 const calcDisplay = document.querySelector('.display');
 const operators = ['/', '*', '-', '+'];
 
+function limitDisplay() {
+  if (calcDisplay.innerText.length > 10) {
+    calcDisplay.innerText = calcDisplay.innerText.substring(0, 10);
+  }
+}
+
 // Keyboard input
 document.addEventListener('keydown', (event) => {
   const key = event.key;
@@ -16,14 +22,19 @@ allButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     const value = e.target.dataset.value;
 
-    if (operators.includes(value) || /[0-9.]/.test(value)) {
-      if (calcDisplay.innerText === '0' && value !== '.') {
+    if (operators.includes(value) || /^\d*\.?\d{0,2}$/.test(value)) {
+      if (calcDisplay.innerText === '0') {
         calcDisplay.innerText = value;
       } else {
         calcDisplay.innerText += value;
       }
+      limitDisplay();
+    } else if (value === '.') {
+      if (!calcDisplay.innerText.includes('.')) {
+        calcDisplay.innerText += '.';
+      }
     } else if (value === '=') {
-      calcDisplay.innerText = eval(calcDisplay.innerText);
+      calcDisplay.innerText = eval(calcDisplay.innerText).toString().substring(0, 10);
     } else if (value === 'clear') {
       calcDisplay.innerText = '0';
     } else if (value === 'delete') {
@@ -33,3 +44,4 @@ allButtons.forEach((button) => {
     }
   });
 });
+
